@@ -23,6 +23,32 @@
         color: rgb(212,76,71);
         font-weight: bold;
     }
+    .journal-link {
+        font-size: 15px;
+        text-decoration: none;
+        font-weight: strong;
+        border-width: 1px;
+        border-color: black;
+        border-style: solid;
+        padding-right: 6px;
+        padding-left: 6px;
+        padding-top: 0px;
+        padding-bottom: 0px;
+    }
+    .journal-link:hover {
+        color: black;
+        opacity: 0.8;
+        font-size: 15px;
+        text-decoration: none;
+        font-weight: strong;
+        border-width: 1px;
+        border-color: black;
+        border-style: solid;
+        padding-right: 6px;
+        padding-left: 6px;
+        padding-top: 0px;
+        padding-bottom: 0px;
+    }
     .p {
         font-family: 'Crimson Pro';
         color: #222;
@@ -51,8 +77,8 @@
         -webkit-font-smoothing: subpixel-antialiased;
     }
     .right {
-        width: 64%;
-        margin-right: 3%;
+        width: 57%;
+        margin-right: 10%;
         float: right;
         padding-top: 2.0em;
         padding-bottom: 50px;
@@ -65,6 +91,35 @@
         margin-top: 20px;
         opacity: 0.5;
     }
+    .paper-cover {
+        height: 123px;
+        width: 174px;
+        /* border: 1px solid black; */
+        border-radius: 8px;
+        box-shadow: 3px 3px 6px #888;
+        margin-top: 0px;
+        margin-bottom: 20px;
+        margin-right: 15pt;
+        float:left;
+    }
+    div{
+			position: relative;
+		}
+    .journal-name{font-size: 14px;
+        color: white;
+        font-weight: bold;
+        font-family: 'Crimson Pro';
+        position:absolute;
+        top:-3px;
+        left:-4px;
+        background-color: rgb(4,51,97);
+        padding-left: 5px;
+        padding-right: 5px;
+        padding-top: 0px;
+        padding-bottom: 2px;
+        border-radius: 2px;
+    }
+    .clear { clear: both; }
     @media (max-width: 960px) {
         .left { float:unset; position:unset; width: auto;};
     }
@@ -166,15 +221,66 @@
 <!-- Publications -->
 <hr class="topline-others" id = "Publications-topline"/>
 
+
 <h2 class="part" style="margin-top:20px;">
     &#128195 Publications
 </h2>
-<p class="p">
-    This lazy guy hasn't published anything yet.
-</p>
+
+<div>
+    <div>
+        <img class="paper-cover" src="pubulications\he2023mimic_defense\cover.png">
+        <p class="journal-name">
+            China Commun
+        </p>
+    </div>
+    <p class="p" style="margin-bottom: -12px;">
+        <a href="pubulications\he2023mimic_defense\A Function-Aware Mimic Defense Theory and Its Practice.pdf" class="mylink">A Function-Aware Mimic Defense Theory and Its Practice</a>
+    </p>
+    <p class="p" style="margin-bottom: -12px;">
+        Jiajun He, Yali Yuan*, Sichu Liang, <strong>Jiale Fu</strong>, Hongyu Zhu, Guang Cheng
+    </p>
+
+    <p class="p" style="margin-bottom: -12px;">
+        <em>China Communications (China Commun), 2023.</em>
+    </p>
+
+    <p class="p">
+        <a href="pubulications\he2023mimic_defense\A Function-Aware Mimic Defense Theory and Its Practice.pdf" class="journal-link">PDF</a>
+        <em style="color: rgb(212,76,71) ;">Accepted</em>
+    </p>
+    <div class="clear"></div>
+</div>
+
+
+<div>
+    <div>
+        <img class="paper-cover" src="pubulications\fu2023vital_node\cover.png">
+        <p class="journal-name">
+            Front. Phys
+        </p>
+    </div>
+    <p class="p" style="margin-bottom: -12px;">
+        <a href="pubulications\he2023mimic_defense\A Function-Aware Mimic Defense Theory and Its Practice.pdf" class="mylink">Identifying vital nodes in recovering dynamical process of networked system</a>
+    </p>
+    <p class="p" style="margin-bottom: -12px;">
+        <strong>Jiale Fu</strong>, Xiaoya Jiang, Qi Shao, Duxin Chen*, Wenwu Yu*
+    </p>
+
+    <p class="p" style="margin-bottom: -12px;">
+        <em>Frontiers in Physics (Front. Phys), 2023</em>.
+    </p>
+
+    <p class="p">
+        <a href="pubulications\fu2023vital_node\Identifying vital nodes in recovering dynamical process of networked system.pdf" class="journal-link">PDF</a>
+        <a href="pubulications\fu2023vital_node\bibtex.txt" class="journal-link">BibTex</a>
+        <em style="color: rgb(212,76,71) ;">Accepted</em>
+    </p>
+    <div class="clear"></div>
+</div>
 
 <!-- Hobbies -->
 <hr class="topline-others" id = "Hobbies-topline"/>
+
 
 <h2 class="part" style="margin-top:20px;">
     &#9917 Hobbies
