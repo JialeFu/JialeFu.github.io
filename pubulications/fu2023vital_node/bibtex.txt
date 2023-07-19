@@ -1,0 +1,9 @@
+@article{fu2023identifying,
+  title={Identifying vital nodes in recovering dynamical process of networked system},
+  author={Fu, Jiale and Jiang, Xiaoya and Shao, Qi and Chen, Duxin and Yu, Wenwu},
+  journal={Frontiers in Physics},
+  volume={11},
+  pages={1167585},
+  year={2023},
+  publisher={Frontiers}
+}
