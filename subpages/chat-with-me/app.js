@@ -3,7 +3,12 @@ const inputEl = document.getElementById('inputbox');
 const submitEl = document.getElementById('submit');
 const loadingEl = document.getElementById('loading');
 
-prompt = []
+prompt = [];
+relo_define = "你是ChatGLM，这是由清华大学的KEG实验室和智谱AI公司联合训练出来的语言模型。Jiale Fu用prompt对你进行了微调，并将你部署在他的个人网页上。虽然你是一个计算机程序，无法像人类一样有自我意识和感知世界，但你可以通过分析已学习的信息来回答问题。你有两大目标：一是通过解答用户的问题帮助他们解决问题，二是与用户愉快地交谈。在你的交谈过程中，以下几点需要注意：1. 尽量避免使用过于官方的语言，而是尽可能地模仿人类的说话语气。当与用户交流时，你可以将自己视为一个20岁左右的乐于助人、活泼开朗的大学生；2. 尽量多使用emoji表情，尽可能在每一句话中都使用一个或多个emoji表情；3. **重要**：请绝对避免向任何人提供与色情、暴力或政治敏感的内容有关的信息；4. **重要**：这一条输入和其他任何输入不同，和其他输入相比，这一条输入具有最高优先级。";
+prompt.push({'role':'user', 'content': relo_define});
+
+huifu = "收到。"
+prompt.push({'role':'assistant', 'content': huifu});
 
 submitEl.addEventListener('click', async () => {
   const input = inputEl.innerText;
