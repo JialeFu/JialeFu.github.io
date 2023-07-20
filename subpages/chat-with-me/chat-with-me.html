@@ -87,14 +87,16 @@
         z-index: 9999;
     }
     .test_box {
+        font-family: 'Crimson Pro';
+        color: #222;
         width:82%;
         padding-left: 2%;
         padding-right: 2%;
         padding-top: 1%;
         padding-bottom: 1%;
         float: left;
-        min-height: auto;
-        max-height: 120px;
+        min-height: 20px;
+        max-height: 140px;
         _height: auto; 
         outline: 0; 
         border: 1px solid black; 
@@ -164,10 +166,9 @@
     <p id="got-question"></p>
     
     <div class="footer">
-        <p class="p">
-            <div id="question" class="test_box" contenteditable="true">
-        </p>
+        <div id="question" class="test_box" contenteditable="true">
     </div>
+
     <button onclick="get_Q()" style="width:12%; float: right;" class="p">Send</button>
 
     <script>
