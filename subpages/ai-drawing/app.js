@@ -2,15 +2,29 @@ const chatboxEl = document.getElementById('chatbox');
 const inputEl = document.getElementById('inputbox');
 const submitEl = document.getElementById('submit');
 const loadingEl = document.getElementById('loading');
-
+ 
 submitEl.addEventListener('click', async () => {
   const input = inputEl.innerText;
   addMessage(input, 'user');
   inputEl.innerText = '';
   
   loadingEl.style.display = 'block';
+
+  //通过名字获取  getElementsByName
+  var obj = document.getElementsByName("quantity");
+      for(var i=0; i<obj.length; i ++){
+          if(obj[i].checked){
+            quantity = obj[i].value;
+          }
+      }
+  var obj = document.getElementsByName("language");
+      for(var i=0; i<obj.length; i ++){
+          if(obj[i].checked){
+            language = obj[i].value;
+          }
+      }
   
-  const img_url = await getResponseFromAPI(input);
+  const img_url = await getResponseFromAPI(input, language, quantity);
 
   loadingEl.style.display = 'none';
 
@@ -49,7 +63,7 @@ function addPicture(img_url, sender) {
   chatboxEl.scrollTop = chatboxEl.scrollHeight;
 }
 
-async function getResponseFromAPI(userQuery) {
+async function getResponseFromAPI(userQuery, language, quantity) {
   try {
     const response = await fetch('http://10.201.0.237:5000/jiale_ai_painter', {
         method: 'POST',
@@ -57,7 +71,9 @@ async function getResponseFromAPI(userQuery) {
             'Content-Type': 'application/json',
         },
         body: JSON.stringify({
-            query: userQuery
+            query: userQuery,
+            language:language,
+            quantity:quantity
         })
     });
 

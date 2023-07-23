@@ -165,6 +165,29 @@
     }
     
     </style>
+
+<!-- <script src="http://pv.sohu.com/cityjson?ie=utf-8"></script>
+    <script type="application/javascript">
+        function getIP(json) {
+        document.write("My public IP address is: ", json.ip);
+        }
+    </script>
+    <script type="application/javascript" src="https://api.ipify.org?format=jsonp&callback=getIP"></script> -->
+    <script src="https://pv.sohu.com/cityjson?ie=utf-8"></script>
+    <script src="https://ip.ws.126.net/ipquery"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script>
+    var iPAddress = "", iPAttach = "";//IP地址，IP归属地
+    GetIPAll();
+    //获取IP地址，IP归属地
+    function GetIPAll() {
+        iPAddress = returnCitySN["cip"];//IP地址:
+        iPAttach = localAddress["province"] + localAddress["city"];//IP归属地
+        document.write(iPAttach)
+    }
+
+</script>
+
 </head>
 
 

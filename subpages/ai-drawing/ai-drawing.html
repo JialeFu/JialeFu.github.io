@@ -222,10 +222,35 @@
       Ask AI painter to draw.
   </p>
 
-  <div class="user-message"><span>一只会打篮球的鸡</span></div>
+  <div class="user-message"><span>一只小鸡在打篮球，漫画风格</span></div>
   <div class="chatgpt-message"> <img src="images\basketball_chicken.jpg" style="width: 150px;"></div>
 
   <hr class="topline-others"/>
+
+  <div class="chatgpt-message">
+    <span>
+      请问您打算用中文还是英文输入？
+      <form>
+        <input type="radio"  name ="language" value="cn" checked>中文；
+        <br>
+        <input type="radio"  name ="language" value="en">英文；
+      </form>
+    </span>
+  </div>
+
+  <div class="chatgpt-message">
+    <span>
+      请问您希望图片的质量是什么样的？
+      <form>
+        <input type="radio"  name ="quantity" value="high" checked>较低（512*512）
+        <br>
+        <input type="radio"  name ="quantity" value="medium">中等（768*768）
+        <br>
+        <input type="radio"  name ="quantity" value="high">较高（1024*1024）
+      </form>
+    </span>
+  </div>
+
 
     <div id="chatbox">
       <!-- 消息列表 -->
