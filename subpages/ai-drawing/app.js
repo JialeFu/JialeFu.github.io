@@ -63,7 +63,7 @@ async function getResponseFromAPI(userQuery) {
 
     const data = await response.json();
     let imgURL = data.image_url;
-    // document.querySelector("img").src = imgURL;
+
     return imgURL;
 
   } catch (error) {

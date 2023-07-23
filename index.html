@@ -6,6 +6,25 @@
     name="viewport">
 
     <title>Jiale Fu | Southeast University</title>
+
+    
+    <script type="text/javascript">
+        function changeLang(){
+            var traget=document.getElementById("all_en");
+            var traget2=document.getElementById("language_button"); 
+            var traget3=document.getElementById("all_cn");
+            if (traget.style.display != "none"){
+                    traget.style.display="none";
+                    traget2.value="English";
+                    traget3.style.display="";
+            } else {
+                traget.style.display="";
+                traget2.value="中文";
+                traget3.style.display="none";
+            }
+       }
+    </script>
+
     
     <style>
     @import url("https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,400;0,500;0,600;1,500;1,600&display=swap");
@@ -121,6 +140,12 @@
         border-radius: 2px;
     }
     .clear { clear: both; }
+    .language_button {
+        color: rgb(212,76,71);
+    }
+    .language_button:hover{
+        color: rgb(212,76,71);
+    }
     @media (max-width: 960px) {
         .left { float:unset; position:unset; width: auto;};
     }
@@ -145,20 +170,24 @@
 
 <body>
 
+<input type="submit" value="中文" onclick="changeLang()" style="background-color: white; border: none; font-family: 'Crimson Pro';font-weight: normal; color: rgb(4,51,97); padding: 10px;" id = "language_button">
+
+<div id="all_en">
+
 <div class="left">
     <img src="images/me.jpg" class="me"/>
     <p class="p">
-        <span style="font-size:24pt; font-weight: bold;color: rgb(4,51,97);">
+        <span style="font-size:24pt; font-weight: bold;color: rgb(4,51,97);" id = "name1">
             Jiale Fu
         </span>
     </p>
     <p class="p" style="margin-top: -20px;">
         <br>"<span style="font-family:STHeiti Light; font-size: 14px;">付嘉乐</span>" in Chinese
     </p>
-    <p class="p" style="margin-bottom: -12px;">
+    <p class="p" style="margin-bottom: -12px;" id ="school">
         Southeast University
     </p>
-    <p class="p" style="margin-bottom: -12px;">
+    <p class="p" style="margin-bottom: -12px;" id = "degree">
         B.S. Student
     </p>
     <p>
@@ -195,27 +224,27 @@
 
 <hr class="topline1"/>
 
-<h2 class="part" style="margin-top:20px;">
+<h2 class="part" style="margin-top:20px;" id ='welcome'>
     &#128522 W E L C O N E !<br>
 </h2>
-<p class="p">
+<p class="p" id = "table_of_content">
     Here's the table of contents:
 </p>
 <p class="p">
-    <a href="#About Me-topline" class="mylink">&#128040 About Me</a> &nbsp&nbsp
-    <a href="#Publications-topline" class="mylink">&#128195 Publications</a> &nbsp&nbsp
-    <a href="#Hobbies-topline" class="mylink">&#9917 Hobbies</a> &nbsp&nbsp
-    <a href="#Resource-topline" class="mylink">&#128214 Resource</a> &nbsp&nbsp
-    <a href="#Let's play!-topline" class="mylink">&#127918 Let's play!</a>
+    <a href="#About Me-topline" class="mylink" id="about_me">&#128040 About Me</a> &nbsp&nbsp
+    <a href="#Publications-topline" class="mylink" id = "publications">&#128195 Publications</a> &nbsp&nbsp
+    <a href="#Hobbies-topline" class="mylink" id="hobbies">&#9917 Hobbies</a> &nbsp&nbsp
+    <a href="#Resource-topline" class="mylink" id="resource">&#128214 Resource</a> &nbsp&nbsp
+    <a href="#Let's play!-topline" class="mylink" id="play">&#127918 Let's play!</a>
 </p>
 
 <!-- About Me -->
 <hr class="topline-others" id = "About Me-topline"/>
 
-<h2 class="part" style="margin-top:20px;">
+<h2 class="part" style="margin-top:20px;" id ="about_me2">
     &#128040 About Me
 </h2>
-<p class="p">
+<p class="p" id = "about_me_text">
     Jiale Fu is currently an undergraduate at <a class="mylink" href="https://www.seu.edu.cn/">Southeast University</a>, Department of Mathematics.
 </p>
 
@@ -223,7 +252,7 @@
 <hr class="topline-others" id = "Publications-topline"/>
 
 
-<h2 class="part" style="margin-top:20px;">
+<h2 class="part" style="margin-top:20px;" id ="publications2">
     &#128195 Publications
 </h2>
 
@@ -283,7 +312,7 @@
 <hr class="topline-others" id = "Hobbies-topline"/>
 
 
-<h2 class="part" style="margin-top:20px;">
+<h2 class="part" style="margin-top:20px;" id="hobbies2">
     &#9917 Hobbies
 </h2>
 <p class="p">
@@ -293,7 +322,7 @@
 <!-- Resource -->
 <hr class="topline-others" id = "Resource-topline"/>
 
-<h2 class="part" style="margin-top:20px;">
+<h2 class="part" style="margin-top:20px;" id="resource2">
     &#128214 Resource
 </h2>
 <p class="p">
@@ -303,7 +332,7 @@
 <!-- Let's play! -->
 <hr class="topline-others" id = "Let's play!-topline"/>
 
-<h2 class="part" style="margin-top:20px;">
+<h2 class="part" style="margin-top:20px;" id ="play2">
     &#127918 Let's play!
 </h2>
 <p class="p">
@@ -313,8 +342,200 @@
         <li>More features to come.</li>
     </ul> 
 </p>
+</div>
 
 </div>
+
+<!-- ---------------------------------中文部分------------------------------ -->
+<!-- ---------------------------------中文部分------------------------------ -->
+<!-- ---------------------------------中文部分------------------------------ -->
+<!-- ---------------------------------中文部分------------------------------ -->
+<div id="all_cn" style="display: none;">
+
+    <div class="left">
+        <img src="images/me.jpg" class="me"/>
+        <p class="p">
+            <span style="font-size:24pt; font-weight: bold;color: rgb(4,51,97);" id = "name1">
+                付嘉乐
+            </span>
+        </p>
+        <p class="p" style="margin-top: -20px;">
+            <br>"<span style="font-family:STHeiti Light; font-size: 14px;">Jiale Fu</span>" in English
+        </p>
+        <p class="p" style="margin-bottom: -12px;" id ="school">
+            东南大学
+        </p>
+        <p class="p" style="margin-bottom: -12px;" id = "degree">
+            本科
+        </p>
+        <p>
+            <span class="p">jialefu (at) seu.edu.cn</span>
+        </p>
+        <p style="margin-top: 10pt;">
+            <a href="https://scholar.google.com" title="Google Scholar" class="ho-alpha">
+                <img border="0" align="middle" src="/images/icons/googlescholar.png"/ height="23px"/></a>
+    
+            &nbsp&nbsp&nbsp&nbsp
+    
+            <a href="https://https://github.com/" title="Github" class="ho-alpha">
+                <img border="0" align="middle" src="/images/icons//github.png"/ height="24px"/></a>
+    
+            &nbsp&nbsp&nbsp&nbsp
+    
+            <a href="https://www.zhihu.com" title="Blog" class="ho-alpha">
+            <img border="0" align="middle" src="/images/icons//blog.png"/ height="20px"/></a>
+    
+            &nbsp&nbsp&nbsp&nbsp
+    
+            <a href="https://space.bilibili.com/346502907" title="Bilibili" class="ho-alpha">
+                <img border="0" align="middle" src="/images/icons//bilibili-fill.png"/ height="25px" /></a>
+    
+            <!-- &nbsp&nbsp&nbsp
+    
+            <a href="mailto:jialefu@seu.edu.cn" title="Email" class="ho-alpha">
+                <img border="0" align="middle" src="/images/email.png"/ height="26px" /></a> -->
+    
+        </p>
+    </div>
+    
+    <div class="right">
+    
+    <hr class="topline1"/>
+    
+    <h2 class="part" style="margin-top:20px;" id ='welcome'>
+        &#128522 欢迎！<br>
+    </h2>
+    <p class="p" id = "table_of_content">
+        下面是本网站的目录：
+    </p>
+    <p class="p">
+        <a href="#About Me-topline2" class="mylink" id="about_me">&#128040 关于我</a> &nbsp&nbsp
+        <a href="#Publications-topline2" class="mylink" id = "publications">&#128195 出版物</a> &nbsp&nbsp
+        <a href="#Hobbies-topline2" class="mylink" id="hobbies">&#9917 爱好</a> &nbsp&nbsp
+        <a href="#Resource-topline2" class="mylink" id="resource">&#128214 资源</a> &nbsp&nbsp
+        <a href="#Let's play!-topline2" class="mylink" id="play">&#127918 一起玩吧！</a>
+    </p>
+    
+    <!-- About Me -->
+    <hr class="topline-others" id = "About Me-topline2"/>
+    
+    <h2 class="part" style="margin-top:20px;" id ="about_me2">
+        &#128040 关于我
+    </h2>
+    <p class="p" id = "about_me_text">
+        付嘉乐目前就读于<a class="mylink" href="https://www.seu.edu.cn/">东南大学</a>数学系本科专业。
+    </p>
+    
+    <!-- Publications -->
+    <hr class="topline-others" id = "Publications-topline2"/>
+    
+    
+    <h2 class="part" style="margin-top:20px;" id ="publications2">
+        &#128195 出版物
+    </h2>
+    
+    <div>
+        <div>
+            <img class="paper-cover" src="pubulications\he2023mimic_defense\cover.png">
+            <p class="journal-name">
+                China Commun
+            </p>
+        </div>
+        <p class="p" style="margin-bottom: -12px;">
+            <a href="pubulications\he2023mimic_defense\A Function-Aware Mimic Defense Theory and Its Practice.pdf" class="mylink">A Function-Aware Mimic Defense Theory and Its Practice</a>
+        </p>
+        <p class="p" style="margin-bottom: -12px;">
+            Jiajun He, Yali Yuan*, Sichu Liang, <strong>Jiale Fu</strong>, Hongyu Zhu, Guang Cheng
+        </p>
+    
+        <p class="p" style="margin-bottom: -12px;">
+            <em>China Communications (China Commun), 2023.</em>
+        </p>
+    
+        <p class="p">
+            <a href="pubulications\he2023mimic_defense\A Function-Aware Mimic Defense Theory and Its Practice.pdf" class="journal-link">PDF</a>
+            <em style="color: rgb(212,76,71) ;">Accepted</em>
+        </p>
+        <div class="clear"></div>
+    </div>
+    
+    
+    <div>
+        <div>
+            <img class="paper-cover" src="pubulications\fu2023vital_node\cover.png">
+            <p class="journal-name">
+                Front. Phys
+            </p>
+        </div>
+        <p class="p" style="margin-bottom: -12px;">
+            <a href="pubulications\he2023mimic_defense\A Function-Aware Mimic Defense Theory and Its Practice.pdf" class="mylink">Identifying vital nodes in recovering dynamical process of networked system</a>
+        </p>
+        <p class="p" style="margin-bottom: -12px;">
+            <strong>Jiale Fu</strong>, Xiaoya Jiang, Qi Shao, Duxin Chen*, Wenwu Yu*
+        </p>
+    
+        <p class="p" style="margin-bottom: -12px;">
+            <em>Frontiers in Physics (Front. Phys), 2023</em>.
+        </p>
+    
+        <p class="p">
+            <a href="pubulications\fu2023vital_node\Identifying vital nodes in recovering dynamical process of networked system.pdf" class="journal-link">PDF</a>
+            <a href="pubulications\fu2023vital_node\bibtex.txt" class="journal-link">BibTex</a>
+            <em style="color: rgb(212,76,71) ;">Accepted</em>
+        </p>
+        <div class="clear"></div>
+    </div>
+    
+    <!-- Hobbies -->
+    <hr class="topline-others" id = "Hobbies-topline2"/>
+    
+    
+    <h2 class="part" style="margin-top:20px;" id="hobbies2">
+        &#9917 爱好
+    </h2>
+    <p class="p">
+        This lazy guy doesn't have any hobbies.
+    </p>
+    
+    <!-- Resource -->
+    <hr class="topline-others" id = "Resource-topline2"/>
+    
+    <h2 class="part" style="margin-top:20px;" id="resource2">
+        &#128214 资源
+    </h2>
+    <p class="p">
+        This lazy guy provides no resources.
+    </p>
+    
+    <!-- Let's play! -->
+    <hr class="topline-others" id = "Let's play!-topline2"/>
+    
+    <h2 class="part" style="margin-top:20px;" id ="play2">
+        &#127918 一起玩吧
+    </h2>
+    <p class="p">
+        <ul type="disc" class="p">
+            <li><a class="mylink" href="subpages\chat-with-me\chat-with-me.html">&#128172 AI聊天</a>：一个在线聊天网站;</li>
+            <li><a class="mylink" href="subpages\ai-drawing\ai-drawing.html">&#127912 AI绘画</a>：一个在线AI画图网站;</li>
+            <li>更多功能，敬请期待。</li>
+        </ul> 
+    </p>
+    </div>
+    
+    </div>
+
+    <script type="text/javascript" src="memorize_lang.js"></script>
+    <script>
+        if(language=='cn'){
+            language = 'en';
+            var traget=document.getElementById("all_en");
+            var traget2=document.getElementById("language_button"); 
+            var traget3=document.getElementById("all_cn");
+            traget.style.display="none";
+            traget2.value="English";
+            traget3.style.display="";
+        }
+    </script>
 
 </body>
 </html>

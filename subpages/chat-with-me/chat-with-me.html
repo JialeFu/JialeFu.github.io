@@ -6,6 +6,35 @@
 
     <title>Let's Chatting!</title>
 
+    <script type="text/javascript">
+      function changeLang(){
+          var traget=document.getElementById("all_en");
+          var traget2=document.getElementById("language_button"); 
+          var traget3=document.getElementById("all_cn");
+          if (traget.style.display != "none"){
+                  traget.style.display="none";
+                  traget2.value="English";
+                  traget3.style.display="";
+          } else {
+              traget.style.display="";
+              traget2.value="中文";
+              traget3.style.display="none";
+          }
+     }
+  </script>
+
+<script src="/memorize_lang.js"></script>
+<script>
+    window.onload = function() {
+        if (language == 'cn') {
+            var target = document.getElementById("all_en");
+            var target3 = document.getElementById("all_cn");
+            target.style.display = "none";
+            target3.style.display = "";
+        }
+    }
+</script>
+
     <style>
       @import url("https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,400;0,500;0,600;1,500;1,600&display=swap");
       /* 你的 CSS 代码 */
@@ -206,6 +235,10 @@
     </style>
   </head>
   <body>
+
+    <input type="submit" value="中文" onclick="changeLang()" style="background-color: white; border: none; font-family: 'Crimson Pro';font-weight: normal; color: rgb(4,51,97); padding: 10px; float: right;" id = "language_button">
+
+  <div id="all_en">
     <h2 class="part" style="margin-top:20px;">
       &#128172 Let's chating!<br>
     </h2>
@@ -217,6 +250,22 @@
   <div class="chatgpt-message"><span>Sure! Once upon a time, there was a young girl ...</span></div>
 
   <hr class="topline-others"/>
+</div>
+
+<div id="all_cn" style="display: none;">
+    <h2 class="part" style="margin-top:20px;">
+      &#128172 一起聊天吧！<br>
+    </h2>
+    <p class="p">
+      与一个类似GPT的模型。
+  </p>
+
+  <div class="user-message"><span>你好，可以给我讲一个故事吗 ？</span></div>
+  <div class="chatgpt-message"><span>当然可以！很久以前，有一个小女孩……</span></div>
+
+  <hr class="topline-others"/>
+</div>
+
 
     <div id="chatbox">
       <!-- 消息列表 -->
@@ -234,4 +283,5 @@
     </div>
   </body>
   <script src="app.js"></script>
+
 </html>
