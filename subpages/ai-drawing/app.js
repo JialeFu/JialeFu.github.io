@@ -45,6 +45,24 @@ function addMessage(text, sender) {
   chatboxEl.scrollTop = chatboxEl.scrollHeight;
 }
 
+// function addPicture(img_url, sender) {
+//   const messageEl = document.createElement('div');
+//   messageEl.classList.add('message');
+//   messageEl.classList.add(`${sender}-message`);
+
+//   // Create an image element
+//   const imageEl = document.createElement('img');
+//   imageEl.src = img_url;
+//   imageEl.alt = 'Image'; // You can set an appropriate alt text for accessibility
+//   imageEl.style.width = '50%'; // Set the width to 50%
+//   imageEl.style.height = '50%'; // Set the width to 50%
+
+//   messageEl.appendChild(imageEl);
+
+//   chatboxEl.appendChild(messageEl);
+//   chatboxEl.scrollTop = chatboxEl.scrollHeight;
+// }
+
 function addPicture(img_url, sender) {
   const messageEl = document.createElement('div');
   messageEl.classList.add('message');
@@ -57,11 +75,20 @@ function addPicture(img_url, sender) {
   imageEl.style.width = '50%'; // Set the width to 50%
   imageEl.style.height = '50%'; // Set the width to 50%
 
-  messageEl.appendChild(imageEl);
+  // Create an anchor element
+  const linkEl = document.createElement('a');
+  linkEl.href = img_url; // Sets the link URL to the image URL
+  linkEl.target = '_blank'; // Makes the link open in a new tab
+
+  // Append the image element to the anchor element
+  linkEl.appendChild(imageEl);
+
+  // Append the anchor element to the message element
+  messageEl.appendChild(linkEl);
 
   chatboxEl.appendChild(messageEl);
-  chatboxEl.scrollTop = chatboxEl.scrollHeight;
 }
+
 
 async function getResponseFromAPI(userQuery, language, quantity) {
   try {
