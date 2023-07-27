@@ -71,7 +71,7 @@ function addPicture(img_url, sender) {
   // Create an image element
   const imageEl = document.createElement('img');
   imageEl.src = img_url;
-  imageEl.alt = 'Image'; // You can set an appropriate alt text for accessibility
+  imageEl.alt = '系统正在维护升级中，请稍后使用'; // You can set an appropriate alt text for accessibility
   imageEl.style.width = '50%'; // Set the width to 50%
   imageEl.style.height = '50%'; // Set the width to 50%
 
