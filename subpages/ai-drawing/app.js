@@ -92,7 +92,7 @@ function addPicture(img_url, sender) {
 
 async function getResponseFromAPI(userQuery, language, quantity) {
   try {
-    const response = await fetch('https://21fd1f18.r12.cpolar.top/jiale_ai_painter', {
+    const response = await fetch('https://1a746806.r15.cpolar.top/jiale_ai_painter', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
