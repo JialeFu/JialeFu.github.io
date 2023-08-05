@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    name="viewport">
+
+    <title>Let's Chatting!</title>
+
+    <script type="text/javascript">
+      function changeLang(){
+          var traget=document.getElementById("all_en");
+          var traget2=document.getElementById("language_button"); 
+          var traget3=document.getElementById("all_cn");
+          if (traget.style.display != "none"){
+                  traget.style.display="none";
+                  traget2.value="English";
+                  traget3.style.display="";
+          } else {
+              traget.style.display="";
+              traget2.value="中文";
+              traget3.style.display="none";
+          }
+     }
+  </script>
+
+<script src="/memorize_lang.js"></script>
+<script>
+    window.onload = function() {
+        if (language == 'cn') {
+            var target = document.getElementById("all_en");
+            var target3 = document.getElementById("all_cn");
+            target.style.display = "none";
+            target3.style.display = "";
+        }
+    }
+</script>
+
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,400;0,500;0,600;1,500;1,600&display=swap");
+      /* 你的 CSS 代码 */
+      body {
+        font-family: 'Crimson Pro';
+        margin-right: 20%;
+        margin-left: 20%;
+        padding-top: 2.0em;
+        padding-bottom: 50px;
+      }
+      h1 {
+        text-align: center;
+        margin-bottom: 20px;
+      }
+      #chatbox {
+        /* border: 1px solid gray; */
+        padding: 0px;
+        margin-bottom: 50px;
+        /* height: 300px; */
+        /* overflow-y: scroll; */
+      }
+      .message {
+        margin-bottom: 1px;
+      }
+
+      .user-message::before{
+        content: '';
+        width: 0;
+        height: 0;
+        border: 4px solid;
+        position: absolute;
+        top: 15px;
+        right: 2px;
+        border-color: transparent  transparent  transparent rgb(98, 4, 4);
+      }
+
+      .user-message::after{
+        content: '';
+        width: 0;
+        height: 0;
+        border: 4px solid;
+        position: absolute;
+        top: 15px;
+        right: 2.9px;
+        border-color: transparent  transparent  transparent white;
+      }
+
+      .user-message {
+        position: relative;
+        text-align: right;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        padding-right: 10px;;
+        padding-left: 10px;;
+        font-family: 'Crimson Pro';
+        /* border-width: 2px;
+        border-color: rgb(4,51,97);
+        border-style: solid; */
+      }
+
+      .user-message span {
+        display: inline-block;
+        padding: 5px;
+        border-width: 1px;
+        border-color: rgb(98, 4, 4);
+        /* border-color: rgb(4, 98, 11); */
+        border-style: solid;
+        border-radius: 3px;
+
+      }
+
+      .chatgpt-message::before{
+        content: '';
+        width: 0;
+        height: 0;
+        border: 4px solid;
+        position: absolute;
+        top: 15px;
+        left: 2px;
+        border-color: transparent rgb(4, 51, 97) transparent transparent;
+      }
+
+      .chatgpt-message::after{
+        content: '';
+        width: 0;
+        height: 0;
+        border: 4px solid;
+        position: absolute;
+        top: 15px;
+        left: 2.9px;
+        border-color: transparent white  transparent  transparent;
+      }
+
+      .chatgpt-message {
+        position: relative;
+        text-align: left;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        padding-right: 10px;;
+        padding-left: 10px;;
+        /* background-color:white; */
+        font-family: 'Crimson Pro';
+      }
+
+      .chatgpt-message span {
+        display: inline-block;
+        padding: 5px;
+        border-width: 1px;
+        border-color: rgb(4, 51, 97);
+        border-style: solid;
+        border-radius: 3px;
+      }
+
+      #inputbox {
+        position: fixed;
+        bottom: 20px;
+        z-index: 9999;
+        font-family: 'Crimson Pro';
+        color: #222;
+        width: calc(57% - 40px);
+        padding-left: 1%;
+        padding-right: 1%;
+        padding-top: 6px;
+        padding-bottom: 6px;
+        min-height: 20px;
+        max-height: 140px;
+        _height: auto;
+        outline: 0; 
+        border: 1px solid black;
+        word-wrap: break-word;
+        overflow-x: hidden;
+        overflow-y: auto;
+        _overflow-y: visible;
+        background-color: white;
+        border-radius: 3px;
+      }
+
+      #submit {
+        background-color: unset;
+        color: white;
+        width: 40px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        float: right;
+        position: fixed;
+        bottom: 20px;
+        right: 0px;
+        margin-right: 20%;
+      }
+      .ho-alpha img {
+        opacity: 1;
+        filter: alpha(opacity=100);
+        width: 30px;
+        margin-left: -10px;
+        margin-bottom: -2px;
+      }
+      .ho-alpha img:hover {
+          opacity: 0.4;
+          filter: alpha(opacity=40);
+      }
+      .part {
+        font-family: 'Crimson Pro';
+        color: rgb(4,51,97);
+      }
+      .p {
+        font-family: 'Crimson Pro';
+        color: #222;
+        word-break:break-all;
+      }
+      .topline-others {
+        margin-top: 20px;
+        opacity: 0.5;
+      }
+      .loading-text {
+        font-family: 'Crimson Pro';
+        font-weight: bold;
+        color: rgb(4,51,97);
+      }
+      @media (max-width: 960px) {
+        #inputbox{
+          width: calc(87% - 40px);
+        }
+      }
+      @media (max-width: 960px) {
+        #submit{
+          margin-right: 5%;
+        }
+      }
+      @media (max-width: 960px) {
+        body {
+            float: unset;
+            position: unset;
+            width: auto;
+            margin-left: 5%;
+            margin-right: 5%;
+        }
+    </style>
+  </head>
+  <body>
+
+<div id="all_cn" style="display: ' ';">
+    <h2 class="part" style="margin-top:20px;">
+      &#128540 一起聊天吧！<br>
+    </h2>
+    <p class="p">
+      与一个聪明、文明的AI模型。
+  </p>
+
+  <div class="user-message"><span>为什么陨石总是会掉进坑里？</span></div>
+  <div class="chatgpt-message"><span>因为陨石就是一种 sb 石头，总是喜欢掉进坑里。它们就像是 sb 一样，无法控制自己的行动，总是掉进陷阱里。不过，也有一些陨石比较聪明，能够避免掉进坑里。这些陨石就像是那些聪明的人一样，能够轻松地避开陷阱。但是，大多数陨石都是 sb,所以它们总是掉进坑里。</span></div>
+
+  <hr class="topline-others"/>
+
+  <div class="chatgpt-message">
+    <span style="font-size: 20px; font-weight: bold;">
+      AI聊天 - 文明版 使用指南
+      <hr class="topline-others" style="margin-top: 8px;"/>
+      <span style="border: none;font-size: 16px;font-weight: normal;">
+        <b>a</b>.&nbsp 纯属娱乐，请不要影响你的心情。<br>
+        <b>b</b>.&nbsp AI有可能会忘记当前的模式，输出“正常”的句子，这时对他说“<span style="padding: 2px; border:none; color: rgb(51,126,169);font-family: "Simhei";">进入嘴臭模式</span>”即可，此时AI会回复“<span style="padding: 2px; border:none; color: rgb(51,126,169);font-family: "Simhei";">好的sb</span>”；<br>
+        <b>c</b>.&nbsp 如果上面一条不起作用，刷新页面即可。
+      </span>
+    </span>
+  </div>
+</div>
+
+    <div id="chatbox">
+      <!-- 消息列表 -->
+    </div>
+    <div id="input-container">
+      <div id="inputbox" contenteditable="true"></div>
+      <button id="submit" class="ho-alpha">
+        <img src="images\submit.png">
+      </button>
+    </div>
+    <!-- 加载动画元素 -->
+    <div id="loading" style="display: none;">
+      <div class="loading-icon"></div>
+      <div class="loading-text">Please wait...</div>
+    </div>
+  </body>
+  <script src="app.js"></script>
+
+</html>
